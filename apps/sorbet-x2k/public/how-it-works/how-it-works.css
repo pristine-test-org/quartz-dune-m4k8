@@ -1,0 +1,42 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #1c1c1c;
+  background: #fafaf7;
+  --accent: #2f7d4f;
+}
+body { margin: 0; }
+header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+main { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+header { display: flex; justify-content: space-between; align-items: center; }
+.mark { font-weight: 700; color: var(--accent); }
+
+/* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+.back { color: var(--accent); font-size: 10px; }
+
+/* Intentional, for Impeccable's test drive: gradient text on the heading. */
+h1 {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  margin: 2rem 0 1rem;
+  background: linear-gradient(90deg, #2f7d4f, #7b4fd1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+main p.edge { margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 0; line-height: 1.5; }
+
+.steps { padding-left: 1.2rem; line-height: 1.8; }
+
+/* Intentional, for Impeccable's test drive: light grey text well under 4.5:1 on the page background. */
+.note { color: #c8c8c4; }
+
+/* Intentional, for Impeccable's test drive: a transition on a layout property (width). */
+.bar {
+  display: inline-block; width: 8rem; padding: 0.7rem 1.2rem; border-radius: 0.5rem;
+  background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+  transition: width 0.3s;
+}
+.bar:hover { width: 11rem; }
+
+footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
