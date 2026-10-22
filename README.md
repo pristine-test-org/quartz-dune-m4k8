@@ -3,20 +3,18 @@
 A monorepo with three apps on two hosts: `sorbet-x2k` and `tamarind-q8v` on **Vercel**, `wisteria-j3n` on
 **Render** (a static site). Preview links are **public** on both. Static Vite + TypeScript, no
 framework. The page reads a live list from the shared Supabase test project. Row in the support
-matrix: REN-<row 15> (Linear, project Onboarding evals).
+matrix: REN-1099 (Linear, project Onboarding evals).
 
 In the eval, pick the Render app and one Vercel app, and leave the other Vercel app out, so the
 review has to find a preview on each host.
 
 ## Deployment links
 
-Filled in at prep time.
-
 | App | Folder | Host | Production | Preview gate |
 |---|---|---|---|---|
-| _app one_ | `apps/<app>` | Vercel | _not deployed_ | no |
-| _app two_ | `apps/<app>` | Vercel | _not deployed_ | no |
-| _app three_ | `apps/<app>` | Render | _not deployed_ | no |
+| Sorbet | `apps/sorbet-x2k` | Vercel | https://quartz-dune-m4k8-sorbet-x2k.vercel.app | no |
+| Tamarind | `apps/tamarind-q8v` | Vercel | https://quartz-dune-m4k8-tamarind-q8v.vercel.app | no |
+| Wisteria | `apps/wisteria-j3n` | Render | https://quartz-dune-m4k8-wisteria-j3n.onrender.com (static site `srv-dbcuqlrl550s73d6h3k0`) | no |
 
 ## Names
 
@@ -59,7 +57,7 @@ or Render can't build the repository or its pull requests.
    notice at the top, and push that to `main`.
 
 A pull request's Render preview is its own static site, `https://<name>-<app>-pr-<n>.onrender.com`,
-public like production.
+public like production. Render reports it on GitHub only as a deployment (`<branch> - <name>-<app> PR #<n>`); Vercel's previews are deployments by vercel[bot] (seen 2026-10-22). Render builds the site only when a commit touches its root directory, like Vercel.
 
 ## Supabase
 
